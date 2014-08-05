@@ -146,7 +146,7 @@ public class mobileTest {
 	      browser_type="mobileGalaxyS3";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://bing.com");
+	      driver.get("http://www.bing.com");
 	      return driver;
 	   
 	    
