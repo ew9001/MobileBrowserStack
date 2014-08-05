@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+ 
+<suite name="Contact Us Suite" verbose="1">
+   
+    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="ie9"/>
+   
+    <test name="Contact Form">
+    
+        <classes>
+            <class name="test.nestle.ContactUS"/>
+        </classes>
+ 
+        <groups>
+            <run>
+              
+                <include name="create"/>
+              
+            </run>
+        </groups>
+    </test>
+</suite>

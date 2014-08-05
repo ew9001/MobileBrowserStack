@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+ 
+<suite name="Nestle Suite Test"  verbose="1">
+    <parameter name="browser" value="ie9"/>
+ 
+  
+    <test name="Contact Form" >
+         
+  <groups> 
+    <run> 
+      <include name="create"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.ContactUS"/> 
+  </classes> 
+</test>
+    
+     
+     <test name="Forgot Password"> 
+  <groups> 
+    <run> 
+      <include name="forgotpassword"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.ForgotPassword"/> 
+  </classes> 
+</test>
+
+      <test name="Create Account"> 
+  <groups> 
+    <run> 
+      <include name="newaccount"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.CreateAccount"/> 
+  </classes> 
+</test>
+     
+     
+     
+     
+    <test name="Existing User"> 
+  <groups> 
+    <run> 
+      <include name="user"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.User"/> 
+  </classes> 
+</test>
+
+     <test name="Savings Calculator"> 
+  <groups> 
+    <run> 
+      <include name="calculate"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.SavingsCalculator"/> 
+  </classes> 
+</test>
+
+     <test name="Submit Recipe"> 
+  <groups> 
+    <run> 
+      <include name="recipe"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.SubmitRecipe"/> 
+  </classes> 
+</test>
+
+     <test name="Search"> 
+  <groups> 
+    <run> 
+      <include name="search"/> 
+    </run> 
+  </groups> 
+  <classes> 
+    <class name="test.nestle.Search"/> 
+  </classes> 
+</test>
+
+
+</suite>
