@@ -270,7 +270,7 @@ public class mobileTest {
 		    
 		    return driver;
 	 }
-	 @AfterMethod(alwaysRun = true, description = "take screenshot on fail") 
+	 @AfterMethod(alwaysRun = true, description = "take screenshot on fails") 
 	 public void afterMethod_takeScreenshot(ITestResult result) throws Exception { 
 	 if (!result.isSuccess()) { 
 		 
