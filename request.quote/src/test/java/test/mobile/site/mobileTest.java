@@ -100,6 +100,7 @@ public class mobileTest {
 		        // nextLine[] is an array of values from the line
 		        System.out.println(nextLine[lineNumber]);
 		        driver.get(nextLine[lineNumber]);
+		        name=""+ browser+"/" + timeStamp + "_" + "Successful-Completed-Capture.png";
 		        takeScreen(name);
 		        counter+=1;
 		    
