@@ -104,7 +104,7 @@ public class mobileTest {
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 		        driver.get(url);
-		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		        name=""+ browser+"/" + timeStamp + "_" + "Successfully-Completed-Capture.png";
 		        takeScreen(name);
 		        counter+=1;
