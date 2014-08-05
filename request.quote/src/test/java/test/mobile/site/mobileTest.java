@@ -90,7 +90,7 @@ public class mobileTest {
 		    File dir = new File("/users/agolubev1/Desktop/RondAndroid");
 		
 		    int lineNumber = 0;
-		    int counter=1;
+		    int counter=0;
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
 		    
 		    while ((line = br.readLine()) != null) {
