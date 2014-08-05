@@ -5,7 +5,7 @@
     <test name="ObjectExitTest simple example">
         <parameter name="browser" value="mobileGalaxyS3"/>
         <classes>
-            <class name="test.mobile.site.mobieTest"/>
+            <class name="test.mobile.site.mobileTest"/>
         </classes>
  
         <groups>
