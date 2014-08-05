@@ -101,7 +101,7 @@ public class mobileTest {
 		        // nextLine[] is an array of values from the line
 		        System.out.println(nextLine[lineNumber]);
 		        url=nextLine[lineNumber];
-		        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 		        driver.get(url);
 		        name=""+ browser+"/" + timeStamp + "_" + "Successful-Completed-Capture.png";
