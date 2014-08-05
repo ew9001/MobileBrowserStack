@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -32,7 +33,7 @@ public class mobileTest {
 	 private static WebDriver driver;
 	  public static final String USERNAME = "earlwillis1";
 	  public String browser_type;
-	  public String fail,error;
+	  public String fail,error,url;
 	  public String baseUrl = "http://stage.coffee-mate.com";
 		public static final String AUTOMATE_KEY = "XsPyFTirN4mH8aCLMB9A";
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
@@ -99,7 +100,10 @@ public class mobileTest {
 		        String [] nextLine = line.split(",");
 		        // nextLine[] is an array of values from the line
 		        System.out.println(nextLine[lineNumber]);
-		        driver.get(nextLine[lineNumber]);
+		        url=nextLine[lineNumber];
+		        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+
+		        driver.get(url);
 		        name=""+ browser+"/" + timeStamp + "_" + "Successful-Completed-Capture.png";
 		        takeScreen(name);
 		        counter+=1;
