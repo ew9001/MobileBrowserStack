@@ -38,7 +38,7 @@ public class mobileTest {
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		
 		String local=(new java.io.File("").getAbsolutePath());
-		String data="" + local + "/" + "infoqa.xls";	
+		String data="" + local + "/" + "qalist.csv";	
 		String myTitle;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
 	  @Test(groups = {"create"})
