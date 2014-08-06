@@ -78,6 +78,7 @@ public class mobileTest {
 		  String name=""+ browser+"/" + counter + "_" + "Successful-Completed-Capture.png";
 		 
 			  System.out.println("Let me see which one get tested " +browser);
+			  System.out.println("Image Name " +name);
 
 			  
 		 
@@ -106,6 +107,7 @@ public class mobileTest {
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		        name=""+ browser+"/" + counter + "_" + "Successfully-Completed-Capture.png";
+		        System.out.println("Image Name " +name);
 		        takeScreen(name);
 		        counter+=1;
 		    
