@@ -104,6 +104,7 @@ public class mobileTest {
 		        url=nextLine[lineNumber];
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		        System.out.println("The URL is " + url);	
+		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		        name=""+ browser+"/" + counter + "_" + "Successfully-Completed-Capture.png";
