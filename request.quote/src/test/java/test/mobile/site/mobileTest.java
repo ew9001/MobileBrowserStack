@@ -105,7 +105,7 @@ public class mobileTest {
 		        System.out.println("The URL is " + url);	
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		        name=""+ browser+"/" + timeStamp + "_" + "Successfully-Completed-Capture.png";
+		        name=""+ browser+"/" + counter + "_" + "Successfully-Completed-Capture.png";
 		        takeScreen(name);
 		        counter+=1;
 		    
