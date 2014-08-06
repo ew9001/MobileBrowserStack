@@ -37,7 +37,7 @@ public class mobileTest {
 	  public String baseUrl = "http://stage.coffee-mate.com";
 		public static final String AUTOMATE_KEY = "XsPyFTirN4mH8aCLMB9A";
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-	    int counter=0;
+	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "qalist.csv";	
 		String myTitle;
@@ -156,6 +156,7 @@ public class mobileTest {
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
 	      driver.get("http://m.crest.com/PreOrder");
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      return driver;
 	   
