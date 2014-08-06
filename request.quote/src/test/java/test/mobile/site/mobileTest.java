@@ -144,7 +144,7 @@ public class mobileTest {
 	  
 		 System.out.println("Let me run mobileGalaxyS3");
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities caps = DesiredCapabilities.firefox();
+		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy S III");
@@ -156,8 +156,9 @@ public class mobileTest {
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
 	      driver.get("http://m.crest.com/PreOrder");
-	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
+	      driver.get("http://crest.com");
 	      return driver;
 	   
 	    
