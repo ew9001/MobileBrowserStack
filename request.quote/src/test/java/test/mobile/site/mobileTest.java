@@ -37,7 +37,7 @@ public class mobileTest {
 	  public String baseUrl = "http://stage.coffee-mate.com";
 		public static final String AUTOMATE_KEY = "XsPyFTirN4mH8aCLMB9A";
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		
+	    int counter=0;
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "qalist.csv";	
 		String myTitle;
@@ -75,7 +75,7 @@ public class mobileTest {
 			  driver=browserAndroid();
 			}
 		  
-		  String name=""+ browser+"/" + timeStamp + "_" + "Successful-Completed-Capture.png";
+		  String name=""+ browser+"/" + counter + "_" + "Successful-Completed-Capture.png";
 		 
 			  System.out.println("Let me see which one get tested " +browser);
 
@@ -91,7 +91,7 @@ public class mobileTest {
 		    File dir = new File("/users/agolubev1/Desktop/RondAndroid");
 		
 		    int lineNumber = 0;
-		    int counter=0;
+
 		    br = new BufferedReader(new FileReader(csvFileToRead));  
 		    
 		    while ((line = br.readLine()) != null) {

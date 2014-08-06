@@ -3,7 +3,7 @@
 <suite name="Example" verbose="1">
     <parameter name="param" value="Laramie"/>
     <test name="ObjectExitTest simple example">
-        <parameter name="param2" value="Laramie2"/>
+        <parameter name="browser" value="mobileGalaxyS3"/>
         <classes>
             <class name="test.mobile.site.mobieTest"/>
         </classes>
