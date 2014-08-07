@@ -199,8 +199,8 @@ public class mobileTest {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "iPhone");
-		 caps.setPlatform(Platform.MAC);
-		 caps.setCapability("device", "iPhone 5");
+		 caps.setCapability("platform", "MAC");
+		 caps.setCapability("device", "iPhone 5S");
 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run iPhone 5S");
