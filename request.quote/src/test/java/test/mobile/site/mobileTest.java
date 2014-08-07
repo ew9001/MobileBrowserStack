@@ -1,5 +1,7 @@
 package test.mobile.site;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,11 +11,13 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.Rotatable;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.android.AndroidDriver;
@@ -35,7 +39,7 @@ public class mobileTest {
 	 private static WebDriver driver;
 	  public static final String USERNAME = "earlwillis1";
 	  public String browser_type;
-	  public String fail,error,url;
+	  public String fail,error,url,rotate;
 	  public String baseUrl = "http://stage.coffee-mate.com";
 		public static final String AUTOMATE_KEY = "XsPyFTirN4mH8aCLMB9A";
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
@@ -114,13 +118,15 @@ public class mobileTest {
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		        name=""+ browser+"/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		        name=""+ browser+"/vertical/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
 		        takeScreen(name);
+		        rotate=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        counter+=1;
 		    
 
 		      }
+	
 		 
 	    	 driver.quit();   
 		
@@ -201,10 +207,12 @@ public class mobileTest {
 		 caps.setCapability("browserName", "iPhone");
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPhone 5S");
-
+		 caps.setCapability("rotatable", true);
 		    driver = new RemoteWebDriver(new URL(URL), caps);
+		    
 	      System.out.println("Let me run iPhone 5S");
 	      driver.get("http://m.crest.com/25235235");
+	      
 	      
 	      return driver;
 	 }
@@ -290,14 +298,29 @@ public class mobileTest {
 	 }
 	 public WebDriver takeScreen(String name) throws IOException
 	 {
+		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
-		  
+	     ((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
 		    	
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		    myTitle = driver.getTitle();
 		   
 		    FileUtils.copyFile(screenshot, new File(name));
+		    
+		    return driver;
+	 }
+	 public WebDriver takeScreenRotate(String name) throws IOException
+	 {
+		
+		 WebDriver augmentedDriver = new Augmenter().augment(driver);
+	     System.out.println("Let me take a screenshot " +name);
+	     ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
+		    	
+		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
+		    myTitle = driver.getTitle();
+		   
+		    FileUtils.copyFile(screenshot, new File(rotate));
 		    
 		    return driver;
 	 }
