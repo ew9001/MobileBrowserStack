@@ -58,9 +58,7 @@ public class mobileTest {
 		  else if (browser.equals("chrome")) {
 			  driver=browserChrome();
 			}
-		  else if (browser.equals("mobileHTC")) {
-			  driver=mobileHTC();
-			}
+		 
 		  
 		  else if (browser.equals("safari")) {
 			  driver=browserSafari();
@@ -113,7 +111,7 @@ public class mobileTest {
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		        name=""+ browser+"/" + counter + "_" + "Successfully-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
-		        takeMobileScreen(name);
+		        takeScreen(name);
 		        counter+=1;
 		    
 
@@ -168,23 +166,7 @@ public class mobileTest {
 	    
 	      
 	 }  
-	 public WebDriver mobileHTC() throws MalformedURLException  
-	 {  
-	  
-		 System.out.println("Let me run mobileHTC");
-		 WebDriver driver = new AndroidDriver();
-	      System.out.println("Let me run mobileHTC");
-	      browser_type="mobileHTC";
-	      System.out.println("Let me see which one get tested" +browser_type);
-	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://m.crest.com/PreOrder");
-	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	      System.out.println(data);
-	      driver.get("http://crest.com");
-	      return driver;
-	   
-	    
-	 }  
+	
 
 
 	 public WebDriver browserChrome() throws MalformedURLException  
@@ -299,19 +281,7 @@ public class mobileTest {
 		    return driver;
 	 }
 	 
-	 public WebDriver takeMobileScreen(String name) throws IOException
-	 {
-		
-	     System.out.println("Let me take a screenshot " +name);
-		  
-		    	
-	        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		    myTitle = driver.getTitle();
-		   
-		    FileUtils.copyFile(screenshot, new File(name));
-		    
-		    return driver;
-	 }
+	 
 	 @AfterMethod(alwaysRun = true, description = "take screenshot on fails") 
 	 public void afterMethod_takeScreenshot(ITestResult result) throws Exception { 
 	 if (!result.isSuccess()) { 
