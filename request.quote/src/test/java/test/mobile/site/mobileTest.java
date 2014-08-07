@@ -60,7 +60,7 @@ public class mobileTest {
 			  driver=browserChrome();
 			}
 		  
-		  else if (browser.equals("iPhone5S")) {
+		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
 			}
 		 
