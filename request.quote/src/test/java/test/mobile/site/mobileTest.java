@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.android.AndroidDriver;
@@ -58,6 +59,10 @@ public class mobileTest {
 		  else if (browser.equals("chrome")) {
 			  driver=browserChrome();
 			}
+		  
+		  else if (browser.equals("iPhone5S")) {
+			  driver=mobileiPhone5S();
+			}
 		 
 		  
 		  else if (browser.equals("safari")) {
@@ -77,7 +82,7 @@ public class mobileTest {
 			  driver=browserAndroid();
 			}
 		  
-		  String name=""+ browser+"/" + counter + "_" + "Successful-Completed-Capture.png";
+		  String name=""+ browser+"/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		 
 			  System.out.println("Let me see which one get tested " +browser);
 			  System.out.println("Image Name " +name);
@@ -184,6 +189,22 @@ public class mobileTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	 }
+	 public WebDriver mobileiPhone5S() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="iPhone5S";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "iPhone");
+		 caps.setPlatform(Platform.MAC);
+		 caps.setCapability("device", "iPhone 5");
+
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run iPhone 5S");
+	      driver.get("http://m.crest.com/25235235");
 	      
 	      return driver;
 	 }
