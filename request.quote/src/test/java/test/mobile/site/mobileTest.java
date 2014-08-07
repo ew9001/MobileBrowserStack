@@ -114,7 +114,7 @@ public class mobileTest {
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		        name=""+ browser+"/" + counter + "_" + "Successfully-Completed-Capture.png";
+		        name=""+ browser+"/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
 		        takeScreen(name);
 		        counter+=1;
