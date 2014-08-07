@@ -301,7 +301,7 @@ public class mobileTest {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
-	     ((Rotatable)augmentedDriver).rotate(ScreenOrientation.PORTRAIT);
+	     ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
 		    	
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		    myTitle = driver.getTitle();
