@@ -1,5 +1,5 @@
 package test.mobile.site;
-
+import org.openqa.selenium.Keys;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import java.io.BufferedReader;
@@ -162,7 +162,7 @@ public class mobileTest {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy S III");
 		 caps.setCapability("browserstack.debug", "true");
-
+		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
 	      browser_type="mobileGalaxyS3";
@@ -301,8 +301,7 @@ public class mobileTest {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
-	     ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
-		    	
+	   
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		    myTitle = driver.getTitle();
 		   
@@ -310,20 +309,7 @@ public class mobileTest {
 		    
 		    return driver;
 	 }
-	 public WebDriver takeScreenRotate(String name) throws IOException
-	 {
-		
-		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-	     System.out.println("Let me take a screenshot " +name);
-	     ((Rotatable)augmentedDriver).rotate(ScreenOrientation.LANDSCAPE);
-		    	
-		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
-		    myTitle = driver.getTitle();
-		   
-		    FileUtils.copyFile(screenshot, new File(rotate));
-		    
-		    return driver;
-	 }
+	
 	 
 	 
 	 @AfterMethod(alwaysRun = true, description = "take screenshot on fails") 
