@@ -204,14 +204,14 @@ public class mobileTest {
 	  
 		 browser_type="iPhone5S";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
-		 iPhoneCaps.setCapability("browserName", "iPhone");
-		 iPhoneCaps.setCapability("platform", "MAC");
-		 iPhoneCaps.setCapability("device", "iPhone 5");
-		 iPhoneCaps.setCapability("browserstack.debug", "true");
-		 iPhoneCaps.setCapability("rotatable", true);
-		 iPhoneCaps.setCapability("deviceOrientation", "LANDSCAPE");
-		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
+		 DesiredCapabilities capabilities = DesiredCapabilities.iphone();
+		  capabilities.setCapability("browserName", "iOS");
+          capabilities.setCapability("platform", "MAC");
+          capabilities.setCapability("device", "iPad Simulator");
+          capabilities.setCapability("app", "Safari");
+          capabilities.setCapability("deviceOrientation", "LANDSCAPE");
+          capabilities.setCapability("nonSyntheticWebClick", "false");
+		    driver = new RemoteWebDriver(new URL(URL), capabilities);
 		    
 	      System.out.println("Let me run iPhone 5S");
 	      driver.get("http://m.crest.com/25235235");
