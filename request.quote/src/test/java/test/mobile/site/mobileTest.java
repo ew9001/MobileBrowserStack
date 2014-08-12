@@ -204,20 +204,18 @@ public class mobileTest {
 	  
 		 browser_type="iPhone5S";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities caps = new DesiredCapabilities();
-		 caps.setCapability("browserName", "iPhone");
-		 caps.setCapability("platform", "MAC");
-		 caps.setCapability("device", "iPhone 5S");
-		 caps.setCapability("browserstack.debug", "true");
-		 caps.setCapability("rotatable", true);
-		 caps.setCapability("deviceOrientation", "landscape");
-		    driver = new RemoteWebDriver(new URL(URL), caps);
+		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
+		 iPhoneCaps.setCapability("browserName", "iPhone");
+		 iPhoneCaps.setCapability("platform", "MAC");
+		 iPhoneCaps.setCapability("device", "iPhone 5S");
+		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("deviceOrientation", "landscape");
+		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
 	      driver.get("http://m.crest.com/25235235");
-	      caps.setCapability("deviceOrientation", "landscape");
-	      caps.setCapability("deviceOrientation", "landscape");
-	      caps.setCapability("deviceOrientation", "landscape");
+
 	      driver.get("http://yandex.com");
 	      
 	      
