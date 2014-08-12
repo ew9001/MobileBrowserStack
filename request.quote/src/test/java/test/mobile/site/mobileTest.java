@@ -207,7 +207,7 @@ public class mobileTest {
 		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
 		 iPhoneCaps.setCapability("browserName", "iPhone");
 		 iPhoneCaps.setCapability("platform", "MAC");
-		 iPhoneCaps.setCapability("device", "iPhone 5S");
+		 iPhoneCaps.setCapability("device", "iPhone 5");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation", "landscape");
