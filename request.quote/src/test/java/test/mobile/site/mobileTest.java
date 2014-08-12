@@ -162,6 +162,7 @@ public class mobileTest {
 		 caps.setCapability("platform", "ANDROID");
 		 caps.setCapability("device", "Samsung Galaxy S III");
 		 caps.setCapability("browserstack.debug", "true");
+		 caps.setCapability("rotatable", true);
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run mobileGalaxyS3");
@@ -208,6 +209,7 @@ public class mobileTest {
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPhone 5S");
 		 caps.setCapability("rotatable", true);
+		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 		    
 	      System.out.println("Let me run iPhone 5S");
