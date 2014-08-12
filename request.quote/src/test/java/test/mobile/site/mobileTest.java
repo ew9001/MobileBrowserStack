@@ -208,6 +208,7 @@ public class mobileTest {
 		 caps.setCapability("browserName", "iPhone");
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPhone 5S");
+		 caps.setCapability("browserstack.debug", "true");
 		 caps.setCapability("rotatable", true);
 		 caps.setCapability("deviceOrientation", "landscape");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
