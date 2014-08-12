@@ -214,6 +214,10 @@ public class mobileTest {
 		    
 	      System.out.println("Let me run iPhone 5S");
 	      driver.get("http://m.crest.com/25235235");
+	      caps.setCapability("deviceOrientation", "landscape");
+	      caps.setCapability("deviceOrientation", "landscape");
+	      caps.setCapability("deviceOrientation", "landscape");
+	      driver.get("http://yandex.com");
 	      
 	      
 	      return driver;
