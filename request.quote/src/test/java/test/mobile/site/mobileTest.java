@@ -307,7 +307,7 @@ public class mobileTest {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +rotate);
-	    
+	     ((AndroidDriver)driver).getOrientation();
 	     ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		   
@@ -323,7 +323,7 @@ public class mobileTest {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
-	    
+	      ((AndroidDriver)driver).getOrientation();
 	     ((AndroidDriver)driver).rotate(ScreenOrientation.PORTRAIT);
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		   
