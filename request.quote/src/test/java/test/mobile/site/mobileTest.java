@@ -118,10 +118,11 @@ public class mobileTest {
 		        System.out.println("Image Name " +name);
 		        driver.get(url);
 		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		        name=""+ browser+"/vertical/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
-		        takeScreen(name);
+		        takeScreenPortrait(name);
 		        rotate=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		        takeScreenLandscape(rotate);
 		        counter+=1;
 		    
 
@@ -169,7 +170,7 @@ public class mobileTest {
 	      browser_type="mobileGalaxyS3";
 	      System.out.println("Let me see which one get tested" +browser_type);
 	      System.out.println("Let me see which one get tested" +driver);
-	      driver.get("http://m.crest.com/PreOrder");
+	      driver.get("http://m.crest.com");
 	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      System.out.println(data);
 	      driver.get("http://crest.com");
@@ -301,13 +302,29 @@ public class mobileTest {
 	   
 	    
 	 }
-	 public WebDriver takeScreen(String name) throws IOException
+	 public WebDriver takeScreenLandscape(String rotate) throws IOException
+	 {
+		
+		 WebDriver augmentedDriver = new Augmenter().augment(driver);
+	     System.out.println("Let me take a screenshot " +rotate);
+	    
+	     ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
+		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
+		   
+		    myTitle = driver.getTitle();
+		   
+		    FileUtils.copyFile(screenshot, new File(rotate));
+		    
+		    return driver;
+	 }
+	 
+	 public WebDriver takeScreenPortrait(String name) throws IOException
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
 	    
-	     ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
+	     ((AndroidDriver)driver).rotate(ScreenOrientation.PORTRAIT);
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		   
 		    myTitle = driver.getTitle();
