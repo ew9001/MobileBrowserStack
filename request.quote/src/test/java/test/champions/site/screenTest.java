@@ -16,7 +16,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.android.AndroidDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -113,7 +115,12 @@ public class screenTest {
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.findElement(By.xpath("//html/body/div/div/div/div[4]/div/div[2]/ul/li[2]/div/div[3]")).click();
+		        WebElement baseElement = driver.findElement(By.id("lb-link"));
+
+		        Actions clicker = new Actions(driver);
+
+		        clicker.moveToElement(baseElement).moveByOffset(50, 50).click().perform();
+		      
 
 		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
