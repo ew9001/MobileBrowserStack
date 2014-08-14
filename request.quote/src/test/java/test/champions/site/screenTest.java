@@ -39,7 +39,7 @@ public class screenTest {
 	  public String baseUrl = "http://stage.coffee-mate.com";
 		public static final String AUTOMATE_KEY = "XsPyFTirN4mH8aCLMB9A";
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-	    int counter=1;
+	    int counter=0;
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "qalist.csv";	
 		String myTitle;
@@ -116,82 +116,19 @@ public class screenTest {
 		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.findElement(By.id("mobile-tile3")).click();
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
-
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		        while (counter < 14) {
+		        	counter+=1;
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenPortrait(name);
-		        counter+=1;
+		      
+		        
+		        }
 		    
 
 		      
