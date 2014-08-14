@@ -115,12 +115,10 @@ public class screenTest {
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        WebElement baseElement = driver.findElement(By.id("lb-link"));
-
-		        Actions clicker = new Actions(driver);
-
-		        clicker.moveToElement(baseElement).moveByOffset(50, 50).click().perform();
-		      
+		        driver.findElement(By.id("mobile-tile3")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		        takeScreenPortrait(name);
 
 		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
