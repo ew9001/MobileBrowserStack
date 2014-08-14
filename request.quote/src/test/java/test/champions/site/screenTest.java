@@ -63,6 +63,9 @@ public class screenTest {
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
 			}
+		  else if (browser.equals("iPhone5S")) {
+			  driver=iPhone5S();
+			}
 		 
 		  
 		  else if (browser.equals("safari")) {
@@ -206,6 +209,29 @@ public class screenTest {
 	      return driver;
 	 }
 	 public WebDriver mobileiPhone5S() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="iPhone5S";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
+		 iPhoneCaps.setCapability("browserName", "iPhone");
+		 iPhoneCaps.setCapability("platform", "MAC");
+		 iPhoneCaps.setCapability("device", "iPhone 5S");
+		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("rotatable", true);
+		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
+		    
+	      System.out.println("Let me run iPhone 5S");
+	      driver.get("http://champion.pkt-tech.com");
+
+	     
+	      
+	      
+	      return driver;
+	 }
+	 
+	 public WebDriver iPhone5S() throws MalformedURLException  
 	 {  
 	  
 		 browser_type="iPhone5S";
