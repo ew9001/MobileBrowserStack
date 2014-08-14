@@ -113,7 +113,8 @@ public class screenTest {
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 550)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.findElement(By.id("tile3")).click();
+		        driver.findElement(By.xpath("//html/body/div/div/div/div[4]/div/div[2]/ul/li[2]/div/div[3]")).click();
+
 		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
