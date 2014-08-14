@@ -9,7 +9,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -110,6 +110,8 @@ public class screenTest {
 		        takeScreenPortrait(name);
 		        driver.findElement(By.id("lb-link")).click();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        JavascriptExecutor jse = (JavascriptExecutor)driver;
+		        jse.executeScript("scroll(0, 250)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.findElement(By.id("tile3")).click();
 		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
