@@ -111,7 +111,7 @@ public class screenTest {
 		        driver.findElement(By.id("lb-link")).click();
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 550)"); //y value '250' can be altered
+		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        driver.findElement(By.xpath("//html/body/div/div/div/div[4]/div/div[2]/ul/li[2]/div/div[3]")).click();
 
