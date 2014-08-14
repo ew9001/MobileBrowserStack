@@ -105,10 +105,10 @@ public class screenTest {
 		       driver.get("http://champion.pkt-tech.com");
 		       
 		    
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		        driver.findElement(By.id("tile3")).click();
 		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
