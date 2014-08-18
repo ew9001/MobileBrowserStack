@@ -218,8 +218,8 @@ public class screenTest {
 
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
-	      
+	      driver.get("http://yahoo.com");
+	      driver.manage().window().maximize();
 	      return driver;
 	 }
 	 
@@ -302,6 +302,7 @@ public class screenTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.get("http://yahoo.com");
+	      driver.manage().window().maximize();
 	      
 	      return driver;
 	   
@@ -325,7 +326,7 @@ public class screenTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
-	      
+	      driver.manage().window().maximize();
 	      return driver;
 	   
 	    
@@ -345,7 +346,7 @@ public class screenTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE8");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
-	      
+	      driver.manage().window().maximize();
 	      return driver;
 	   
 	    
@@ -365,7 +366,7 @@ public class screenTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE10");
 	      driver.get("http://yahoo.com");
-	      
+	      driver.manage().window().maximize();
 	      return driver;
 	   
 	    
