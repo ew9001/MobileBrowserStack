@@ -238,6 +238,7 @@ public class screenTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Firefox");
 	      driver.get("http://yahoo.com");
+	      driver.manage().window().maximize();
 	      
 	      return driver;
 	 }
