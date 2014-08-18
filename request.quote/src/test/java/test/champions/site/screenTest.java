@@ -118,16 +118,20 @@ public class screenTest {
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.findElement(By.id("mobile-tile3")).click();
+		        if (browser.equals("firefox")||browser.equals("ie9")||browser.equals("chrome")||browser.equals("ie10")||browser.equals("safari")) {
+		        driver.findElement(By.id("tile3")).click();
+		        }else {
+		        	driver.findElement(By.id("mobile-tile3")).click();
+		        }
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        while (counter < 14) {
 		        	counter+=1;
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
 		      
 		        
@@ -266,7 +270,7 @@ public class screenTest {
 		 caps.setCapability("resolution", "1024x768");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	   
