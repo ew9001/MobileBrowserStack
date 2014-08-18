@@ -60,6 +60,10 @@ public class screenTest {
 			  driver=browserChrome();
 			}
 		  
+		  else if (browser.equals("firefox")) {
+			  driver=browserFirefox();
+			}
+		  
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
 			}
