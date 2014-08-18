@@ -305,10 +305,10 @@ public class screenTest {
 		 caps.setCapability("browserName", "iPad");
 		 caps.setCapability("platform", "MAC");
 		 caps.setCapability("device", "iPad 3rd (7.0)");
-
+		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Ipad");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      driver.get("http://champion.pkt.tech.com");
 	      
 	      return driver;
 	   
