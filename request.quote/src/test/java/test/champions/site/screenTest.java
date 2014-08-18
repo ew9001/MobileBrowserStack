@@ -75,6 +75,10 @@ public class screenTest {
 		  else if (browser.equals("ie9")) {
 			  driver=browserIE9();
 			}
+		  else if (browser.equals("ie10")) {
+			  driver=browserIE10();
+		  }
+			
 		  
 
 		  else if (browser.equals("iPad")) {
@@ -118,7 +122,7 @@ public class screenTest {
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        if (browser.equals("firefox")||browser.equals("ie9")||browser.equals("chrome")||browser.equals("ie10")||browser.equals("safari")) {
+		        if (browser.equals("firefox")||browser.equals("ie9")||browser.equals("chrome")||browser.equals("ie10")||browser.equals("safari")||browser.equals("ie10")) {
 		        driver.findElement(By.id("tile3")).click();
 		        }else {
 		        	driver.findElement(By.id("mobile-tile3")).click();
@@ -294,6 +298,27 @@ public class screenTest {
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run IE9");
 	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	   
+	    
+	 }
+	 
+	 public WebDriver browserIE10() throws MalformedURLException  
+	 {  
+	  
+		
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "IE");
+		 caps.setCapability("browser_version", "10.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run IE10");
+	      driver.get("http://yahoo.com");
 	      
 	      return driver;
 	   
