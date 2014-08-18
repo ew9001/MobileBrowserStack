@@ -133,12 +133,12 @@ public class screenTest {
 		        }else {
 		        	driver.findElement(By.id("mobile-tile3")).click();
 		        }
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        while (counter < 14) {
 		        	counter+=1;
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
