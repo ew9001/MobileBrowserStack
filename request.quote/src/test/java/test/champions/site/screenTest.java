@@ -218,6 +218,26 @@ public class screenTest {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver browserFirefox() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="firefox";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = DesiredCapabilities.firefox();
+		 caps.setCapability("browser", "Firefox");
+		 caps.setCapability("browser_version", "31.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Firefox");
+	      driver.get("http://yahoo.com");
+	      
+	      return driver;
+	 }
+	 
 	 public WebDriver mobileiPhone5S() throws MalformedURLException  
 	 {  
 	  
