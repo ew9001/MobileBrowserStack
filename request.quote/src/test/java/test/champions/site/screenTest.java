@@ -141,8 +141,9 @@ public class screenTest {
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
+		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		      
 		        
 		        }
