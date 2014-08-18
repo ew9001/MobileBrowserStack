@@ -71,7 +71,9 @@ public class screenTest {
 		  else if (browser.equals("safari")) {
 			  driver=browserSafari();
 			}
-		  
+		  else if (browser.equals("ie8")) {
+			  driver=browserIE8();
+			}
 		  else if (browser.equals("ie9")) {
 			  driver=browserIE9();
 			}
@@ -303,7 +305,26 @@ public class screenTest {
 	   
 	    
 	 }
-	 
+	 public WebDriver browserIE8() throws MalformedURLException  
+	 {  
+	  
+		
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "IE");
+		 caps.setCapability("browser_version", "8.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run IE8");
+	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	   
+	    
+	 }
 	 public WebDriver browserIE10() throws MalformedURLException  
 	 {  
 	  
