@@ -147,10 +147,15 @@ public class screenTest {
 		        if(driver.findElement(By.cssSelector("span.arrow-right"))!= null){
 		        	System.out.println("Element is Present");
 		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	}else{
 		        	System.out.println("Element is Absent");
 		        	}
 		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        assertTrue(driver.isTextPresent("Howdy, admin"));
+
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
 		    
 		        
