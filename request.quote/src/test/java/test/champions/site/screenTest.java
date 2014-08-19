@@ -142,6 +142,8 @@ public class screenTest {
 		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+			        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Captured-Product.png";
 		        takeScreenPortrait(name);
 		        
