@@ -138,10 +138,10 @@ public class screenTest {
 		        takeScreenPortrait(name);
 		        while (counter < 14) {
 		        	counter+=1;
-		        
+		        	driver.manage().timeouts().implicitlyWait(185, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Captured-Product.png";
 		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(55, TimeUnit.SECONDS);
+		        
 		      
 		     
 		        if(driver.findElement(By.cssSelector("span.arrow-right"))!= null){
