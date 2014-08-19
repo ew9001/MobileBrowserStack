@@ -142,6 +142,12 @@ public class screenTest {
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		     
+		        if(driver.findElement(By.cssSelector("span.arrow-right"))!= null){
+		        	System.out.println("Element is Present");
+		        	}else{
+		        	System.out.println("Element is Absent");
+		        	}
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
 		        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		      
