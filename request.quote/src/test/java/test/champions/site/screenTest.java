@@ -150,6 +150,7 @@ public class screenTest {
 		        	}else{
 		        	System.out.println("Element is Absent");
 		        	}
+		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
 		    
 		        
