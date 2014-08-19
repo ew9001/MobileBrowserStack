@@ -138,20 +138,19 @@ public class screenTest {
 		        takeScreenPortrait(name);
 		        while (counter < 14) {
 		        	counter+=1;
-		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
+		        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Captured-Product.png";
 		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		      
 		     
 		        if(driver.findElement(By.cssSelector("span.arrow-right"))!= null){
 		        	System.out.println("Element is Present");
-		        	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		        	driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		        	}else{
 		        	System.out.println("Element is Absent");
 		        	}
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		      
+		    
 		        
 		        }
 		    
