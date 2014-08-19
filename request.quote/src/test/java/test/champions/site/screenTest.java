@@ -118,12 +118,19 @@ public class screenTest {
 		    
 		  	  
 		       driver.get("http://champion.pkt-tech.com");
-		       
+		       driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		    
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        driver.findElement(By.id("lb-link")).click();
+		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
