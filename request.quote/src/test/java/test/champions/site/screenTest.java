@@ -267,8 +267,8 @@ public class screenTest {
 		 DesiredCapabilities caps = DesiredCapabilities.firefox();
 		 caps.setCapability("browser", "Firefox");
 		 caps.setCapability("browser_version", "31.0");
-		 caps.setCapability("os", "Windows");
-		 caps.setCapability("os_version", "7");
+		 caps.setCapability("os", "OS X");
+		 caps.setCapability("os_version", "Mountain Lion");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
@@ -331,10 +331,9 @@ public class screenTest {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Safari");
-		 caps.setCapability("browser_version", "6.0");
+		 caps.setCapability("browser_version", "6.1");
 		 caps.setCapability("os", "OS X");
-		 caps.setCapability("os_version", "Lion");
-		 caps.setCapability("resolution", "1024x768");
+		 caps.setCapability("os_version", "Mountain Lion");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
 	      driver.get("http://yahoo.com");
