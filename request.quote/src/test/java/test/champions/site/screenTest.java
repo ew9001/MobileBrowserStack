@@ -143,6 +143,7 @@ public class screenTest {
 		        driver.manage().timeouts().implicitlyWait(180000, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
+		        driver.manage().window().maximize();
 		        while (counter < 14) {
 		        	counter+=1;
 		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
