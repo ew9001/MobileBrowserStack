@@ -140,7 +140,7 @@ public class screenTest {
 		        }else {
 		        	driver.findElement(By.id("mobile-tile3")).click();
 		        }
-		        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		        driver.manage().timeouts().implicitlyWait(180000, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        while (counter < 14) {
