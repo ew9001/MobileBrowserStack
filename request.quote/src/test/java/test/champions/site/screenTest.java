@@ -123,7 +123,6 @@ public class screenTest {
 	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		    
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        driver.findElement(By.id("lb-link")).click();
@@ -131,7 +130,6 @@ public class screenTest {
 	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        //jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        
@@ -163,15 +161,6 @@ public class screenTest {
 		        if(driver.findElement(By.cssSelector("span.arrow-right"))!= null){
 		        	System.out.println("Element is Present");
 		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	}else{
 		        	System.out.println("Element is Absent");
 		        	}
@@ -179,7 +168,7 @@ public class screenTest {
 		   
 
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		    
+		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        
 		        }
 		    
