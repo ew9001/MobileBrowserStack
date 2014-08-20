@@ -266,9 +266,9 @@ public class screenTest {
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 		 DesiredCapabilities caps = DesiredCapabilities.firefox();
 		 caps.setCapability("browser", "Firefox");
-		 caps.setCapability("browser_version", "31.0");
+		 caps.setCapability("browser_version", "30.0");
 		 caps.setCapability("os", "OS X");
-		 caps.setCapability("os_version", "Mountain Lion");
+		 caps.setCapability("os_version", "Mavericks");
 		 caps.setCapability("resolution", "1024x768");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
