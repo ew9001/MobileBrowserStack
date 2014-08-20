@@ -162,6 +162,12 @@ public class screenTest {
 		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		        	}else{
 		        	System.out.println("Element is Absent");
 		        	}
