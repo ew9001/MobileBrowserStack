@@ -144,7 +144,6 @@ public class screenTest {
 		        driver.manage().timeouts().implicitlyWait(180000, TimeUnit.SECONDS);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
-		        driver.manage().window().maximize();
 		        while (counter < 14) {
 		        	counter+=1;
 		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
@@ -323,9 +322,9 @@ public class screenTest {
 		 caps.setCapability("browser_version", "6.1");
 		 caps.setCapability("os", "OS X");
 		 caps.setCapability("os_version", "Mountain Lion");
+		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run Safari");
-	      driver.get("http://yahoo.com");
 	      driver.manage().window().maximize();
 	      
 	      return driver;
