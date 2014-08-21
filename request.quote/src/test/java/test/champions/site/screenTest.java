@@ -148,14 +148,15 @@ public class screenTest {
 		     
 		        if(driver.findElement(By.cssSelector("span.arrow-right"))!= null){
 		        	System.out.println("Element is Present");
-		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	Thread.sleep(5000);
 		        	}else{
 		        	System.out.println("Element is Absent");
 		        	}
-		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        Thread.sleep(5000);
 		   
 
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
+		        Thread.sleep(5000);
 		        Thread.sleep(5000);
 		        
 		        }
