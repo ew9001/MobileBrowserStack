@@ -118,22 +118,12 @@ public class screenTest {
 		    
 		  	  
 		       driver.get("http://champion.pkt-tech.com");
-		       driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		       Thread.sleep(5000);
 		    
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        takeScreenPortrait(name);
 		        driver.findElement(By.id("lb-link")).click();
-		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        Thread.sleep(5000);
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        //jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        
@@ -150,12 +140,7 @@ public class screenTest {
 		        takeScreenPortrait(name);
 		        while (counter < 14) {
 		        	counter+=1;
-		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-			        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        	Thread.sleep(5000);
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Captured-Product.png";
 		        takeScreenPortrait(name);
 		        
@@ -171,12 +156,7 @@ public class screenTest {
 		   
 
 		        driver.findElement(By.cssSelector("span.arrow-right")).click();
-		        driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-	        	 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
-		        	driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
+		        Thread.sleep(5000);
 		        
 		        }
 		    
