@@ -127,9 +127,9 @@ public class screenTest {
 		        JavascriptExecutor jse = (JavascriptExecutor)driver;
 		        //jse.executeScript("scroll(0, 100)"); //y value '250' can be altered
 		        
-		        jse.executeScript("document.body.style.zoom='95%'");
+		        //jse.executeScript("document.body.style.zoom='95%'");
 		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		       
+		        Thread.sleep(3000);
 		        if (browser.equals("firefox")||browser.equals("ie9")||browser.equals("chrome")||browser.equals("ie10")||browser.equals("safari")||browser.equals("ie8")) {
 		        driver.findElement(By.id("tile3")).click();
 		        }else {
