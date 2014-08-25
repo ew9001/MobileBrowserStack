@@ -70,7 +70,9 @@ public class screenTest {
 		  else if (browser.equals("iPhone5S")) {
 			  driver=iPhone5S();
 			}
-		 
+		  else if (browser.equals("browserSamsungGalaxy")) {
+			  driver=browserSamsungGalaxy();
+			}
 		  
 		  else if (browser.equals("safari")) {
 			  driver=browserSafari();
@@ -256,6 +258,25 @@ public class screenTest {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver browserSamsungGalaxy() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="firefox";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = DesiredCapabilities.firefox();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Samsung Galaxy Nexus");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Firefox");
+	      driver.get("http://yahoo.com");
+	      driver.manage().window().maximize();
+	      
+	      return driver;
+	 }
+	 
 	 
 	 public WebDriver mobileiPhone5S() throws MalformedURLException  
 	 {  
