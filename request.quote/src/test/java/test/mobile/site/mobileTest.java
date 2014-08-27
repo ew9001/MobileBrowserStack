@@ -67,6 +67,10 @@ public class mobileTest {
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
 			}
+		  
+		  else if (browser.equals("metamucilPhone4S")) {
+			  driver=metamucilPhone4S();
+			}
 		 
 		  
 		  else if (browser.equals("safari")) {
@@ -211,6 +215,28 @@ public class mobileTest {
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
+		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
+		    
+	      System.out.println("Let me run iPhone 5S");
+	      driver.get("http://m.crest.com/25235235");
+
+	      driver.get("http://yandex.com");
+	      
+	      
+	      return driver;
+	 }
+	 public WebDriver metamuciliPhone4S() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="iPhone5S";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
+		 iPhoneCaps.setCapability("browserName", "iPhone");
+		 iPhoneCaps.setCapability("platform", "MAC");
+		 iPhoneCaps.setCapability("device", "iPhone 4S");
+		 iPhoneCaps.setCapability("browserstack.debug", "true");
+		 iPhoneCaps.setCapability("rotatable", true);
+		
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 5S");
