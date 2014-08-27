@@ -71,7 +71,7 @@ public class screenTest {
 			  driver=iPhone5S();
 			}
 		  
-		  else if (browser.equals("iPhone4S")) {
+		  else if (browser.equals("mobileiPhone4S")) {
 			  driver=mobileiPhone4S();
 			}
 		  
@@ -317,7 +317,6 @@ public class screenTest {
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
-		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 4S");
