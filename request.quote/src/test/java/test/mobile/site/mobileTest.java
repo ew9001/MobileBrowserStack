@@ -121,8 +121,7 @@ public class mobileTest {
 		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
 		        System.out.println("Image Name " +name);
 		        takeScreenPortrait(name);
-		        rotate=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture.png";
-		        takeScreenLandscape(rotate);
+		        
 		        counter+=1;
 		    
 
@@ -302,29 +301,14 @@ public class mobileTest {
 	   
 	    
 	 }
-	 public WebDriver takeScreenLandscape(String rotate) throws IOException
-	 {
-		
-		 WebDriver augmentedDriver = new Augmenter().augment(driver);
-	     System.out.println("Let me take a screenshot " +rotate);
-	     ((AndroidDriver)driver).getOrientation();
-	     ((AndroidDriver)driver).rotate(ScreenOrientation.LANDSCAPE);
-		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
-		   
-		    myTitle = driver.getTitle();
-		   
-		    FileUtils.copyFile(screenshot, new File(rotate));
-		    
-		    return driver;
-	 }
+
 	 
 	 public WebDriver takeScreenPortrait(String name) throws IOException
 	 {
 		
 		 WebDriver augmentedDriver = new Augmenter().augment(driver);
 	     System.out.println("Let me take a screenshot " +name);
-	      ((AndroidDriver)driver).getOrientation();
-	     ((AndroidDriver)driver).rotate(ScreenOrientation.PORTRAIT);
+	  
 		    File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
 		   
 		    myTitle = driver.getTitle();
