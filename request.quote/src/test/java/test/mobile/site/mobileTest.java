@@ -68,8 +68,8 @@ public class mobileTest {
 			  driver=mobileiPhone5S();
 			}
 		  
-		  else if (browser.equals("metamucilPhone4S")) {
-			  driver=metamucilPhone4S();
+		  else if (browser.equals("metamuciliPhone4S")) {
+			  driver=metamuciliPhone4S();
 			}
 		 
 		  
