@@ -75,6 +75,10 @@ public class screenTest {
 			  driver=mobileiPhone4S();
 			}
 		  
+		  else if (browser.equals("tabletSamsungAndroid")) {
+			  driver=tabletSamsungAndroid();
+			}
+		  
 		  else if (browser.equals("browserSamsungGalaxy")) {
 			  driver=browserSamsungGalaxy();
 			}
@@ -196,6 +200,30 @@ public class screenTest {
 	     driver.quit();
 	 }
 
+	 public WebDriver tabletSamsungAndroid() throws MalformedURLException  
+	 {  
+	  
+		 System.out.println("Let me run mobileGalaxyS3");
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browserName", "android");
+		 caps.setCapability("platform", "ANDROID");
+		 caps.setCapability("device", "Samsung Galaxy Note 10.1");
+		 caps.setCapability("browserstack.debug", "true");
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run tabletSamsungAndroid");
+	      browser_type="mobileGalaxyS3";
+	      System.out.println("Let me see which one get tested" +browser_type);
+	      System.out.println("Let me see which one get tested" +driver);
+	      driver.get("http://m.crest.com");
+	      driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	      System.out.println(data);
+	      driver.get("http://crest.com");
+	      return driver;
+	   
+	    
+	      
+	 }  
 	 public WebDriver mobileGalaxyS3() throws MalformedURLException  
 	 {  
 	  
@@ -222,6 +250,7 @@ public class screenTest {
 	    
 	      
 	 }  
+	
 	
 
 
@@ -317,6 +346,7 @@ public class screenTest {
 		 iPhoneCaps.setCapability("device", "iPhone 4S");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
+		
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
 	      System.out.println("Let me run iPhone 4S");
