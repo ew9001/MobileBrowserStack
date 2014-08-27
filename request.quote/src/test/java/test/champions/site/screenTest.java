@@ -208,7 +208,7 @@ public class screenTest {
 		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browserName", "android");
 		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Samsung Galaxy Note 10.1");
+		 caps.setCapability("device", "Samsung Galaxy Tab 2 10.1");
 		 caps.setCapability("browserstack.debug", "true");
 		    driver = new RemoteWebDriver(new URL(URL), caps);
 	      System.out.println("Let me run tabletSamsungAndroid");
