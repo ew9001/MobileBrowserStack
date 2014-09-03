@@ -46,7 +46,9 @@ public class mobileTest {
 	    int counter=1;
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "metamucilprodcution.csv";	
+		String data2="" + local + "/" + "metamucilprodcutiondesktop.csv";	
 		String myTitle;
+		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
 	  @Test(groups = {"create"})
 		@Parameters({"browser"})
@@ -57,33 +59,44 @@ public class mobileTest {
 		  
 		  if (browser.equals("mobileGalaxyS3")) {
 			  driver=mobileGalaxyS3();
+			  csvFileToRead = data;
+			  
 			}
 		  
 
 		  else if (browser.equals("chrome")) {
 			  driver=browserChrome();
+			  csvFileToRead = data2;
 			}
 		  
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
+			   csvFileToRead = data;
 			}
 		  
 		  else if (browser.equals("metamuciliPhone4S")) {
 			  driver=metamuciliPhone4S();
+			  csvFileToRead = data;
 			}
 		 
 		  
 		  else if (browser.equals("safari")) {
 			  driver=browserSafari();
+			  csvFileToRead = data2;
 			}
 		  
 		  else if (browser.equals("ie9")) {
 			  driver=browserIE9();
+			   csvFileToRead = data2;
 			}
 		  
 
 		  else if (browser.equals("iPad")) {
 			  driver=browserIpad();
+			}
+		  else if (browser.equals("firefox")) {
+			  driver=browserFirefox();
+			  csvFileToRead = data2;
 			}
 		  
 		  else if (browser.equals("Android")) {
@@ -100,7 +113,9 @@ public class mobileTest {
 		  System.out.println("Let me run get driver "+driver);
 		  fail=""+ browser+"/Failed/" + timeStamp + "_" + "contact_us.png";
 			 
-		  String csvFileToRead = data;
+		  
+		  
+		 
 		    BufferedReader br =null;
 		    String line="";
 		    String ext = "png";
@@ -190,7 +205,7 @@ public class mobileTest {
 	  
 		 browser_type="chrome";
 		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities caps = DesiredCapabilities.firefox();
+		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setCapability("browser", "Chrome");
 		 caps.setCapability("browser_version", "32.0");
 		 caps.setCapability("os", "Windows");
@@ -203,6 +218,26 @@ public class mobileTest {
 	      
 	      return driver;
 	 }
+	 
+	 public WebDriver browserFirefox() throws MalformedURLException  
+	 {  
+	  
+		 browser_type="chrome";
+		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+		 DesiredCapabilities caps = new DesiredCapabilities();
+		 caps.setCapability("browser", "Firefox");
+		 caps.setCapability("browser_version", "31.0");
+		 caps.setCapability("os", "Windows");
+		 caps.setCapability("os_version", "7");
+		 caps.setCapability("resolution", "1024x768");
+
+		    driver = new RemoteWebDriver(new URL(URL), caps);
+	      System.out.println("Let me run Chrome");
+	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
+	      
+	      return driver;
+	 }
+	 
 	 public WebDriver mobileiPhone5S() throws MalformedURLException  
 	 {  
 	  
