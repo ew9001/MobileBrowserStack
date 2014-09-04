@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
  
-<suite name="Examples" verbose="1">
+<suite name="Examples1" verbose="1">
     <parameter name="param" value="Laramie"/>
     <test name="ObjectExitTest simple example">
-        <parameter name="browser" value="mobileiPhone5S"/>
+        <parameter name="browser" value="mobileiPhone4S"/>
         <classes>
             <class name="test.mobile.site.mobileTest"/>
         </classes>
