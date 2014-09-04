@@ -320,13 +320,13 @@ public class screenTest {
 		 DesiredCapabilities iPhoneCaps = DesiredCapabilities.iphone();
 		 iPhoneCaps.setCapability("browserName", "iPhone");
 		 iPhoneCaps.setCapability("platform", "MAC");
-		 iPhoneCaps.setCapability("device", "iPhone 5S");
+		 iPhoneCaps.setCapability("device", "iPhone 5");
 		 iPhoneCaps.setCapability("browserstack.debug", "true");
 		 iPhoneCaps.setCapability("rotatable", true);
 		 iPhoneCaps.setCapability("deviceOrientation","landscape");
 		    driver = new RemoteWebDriver(new URL(URL), iPhoneCaps);
 		    
-	      System.out.println("Let me run iPhone 5S");
+	      System.out.println("Let me run iPhone 5");
 	      driver.get("http://champion.pkt-tech.com");
 
 	     
